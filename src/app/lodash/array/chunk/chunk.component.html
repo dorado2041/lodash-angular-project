@@ -1,0 +1,37 @@
+<mat-card>
+  <div fxLayout="column" fxLayoutGap="1rem">
+    <div class="heading">
+      <h2 class="badge badge-secondary">_.chunk(array, [size=n])</h2>
+      <p>Creates an array of elements split into groups the length of size. If array can't be split evenly, the final
+        chunk will be the remaining elements.</p>
+      <h2>Since</h2>
+      <p>3.0.0</p>
+      <h2>Arguments</h2>
+      <p>array (Array): The array to process.</p>
+      <p>[size=1] (number): The length of each chunk</p>
+      <h2>Returns</h2>
+      <p>(Array): Returns the new array of chunks.</p>
+      <mat-divider></mat-divider>
+    </div>
+    <div class="body" fxLayout="column" fxLayoutGap="1rem">
+      <h3>Try Example : </h3>
+      <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="1rem">
+        <mat-form-field fxFlex>
+          <mat-label>Enter Array value</mat-label>
+          <input matInput placeholder="Enter Array value" [(ngModel)]="arrayElement" required="true">
+          <mat-hint>separate values by comma to convert value into an array</mat-hint>
+        </mat-form-field>
+        <mat-form-field fxFlex>
+          <mat-label>Enter chunk size</mat-label>
+          <input matInput placeholder="Enter Chunk Size" [(ngModel)]="chunkSize" required="true">
+        </mat-form-field>
+      </div>
+      <div>
+        <span>Origional Array : {{ getOrigionalArray() | json}}</span>
+      </div>
+      <div>
+        <span>Chunk Array : {{ getChunkArray() | json}}</span>
+      </div>
+    </div>
+  </div>
+</mat-card>

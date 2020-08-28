@@ -1,11 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ChunkComponent } from './lodash/array/chunk/chunk.component';
+import { NotFoundComponent } from './common/component/notfound/not.found.component';
 
+const routes: Routes = [
+  { path: 'array/chunk', component: ChunkComponent },
 
-const routes: Routes = [];
+  { path: 'default', component: NotFoundComponent },
+  { path: '**', redirectTo: '/default' }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

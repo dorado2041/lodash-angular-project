@@ -129,6 +129,6 @@
   },
   "defaultProject": "lodash-angular-project",
   "cli": {
-    "analytics": "558ba54f-ca00-4cbe-b576-c9431e1899f7"
+    "analytics": false
   }
 }

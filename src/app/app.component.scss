@@ -1,0 +1,17 @@
+:host{
+
+  .main, mat-sidenav, mat-sidenav-content{
+    min-height: 100vh;
+  }
+  .menu-spacer {
+    flex: 1 1 auto;
+}
+
+.mat-drawer {
+  width: 75% !important;
+}
+.logo{
+  width: auto;
+  max-height: 33px ;
+}
+}
