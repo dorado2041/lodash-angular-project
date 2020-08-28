@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'array/chunk', component: ChunkComponent },
 
   { path: 'default', component: NotFoundComponent },
+  { path: '', redirectTo: '/default', pathMatch: 'full' },
   { path: '**', redirectTo: '/default' }
 ];
 
