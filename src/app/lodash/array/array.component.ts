@@ -20,6 +20,11 @@ export class ArrayComponent {
       name: '_.chunk',
       code: 'CHUNK',
       path: 'array/chunk'
+    },
+    {
+      name: '_.compact',
+      code: 'COMPACT',
+      path: 'array/compact'
     }
   ];
 

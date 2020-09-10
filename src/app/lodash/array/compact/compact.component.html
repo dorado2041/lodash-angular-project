@@ -1,23 +1,20 @@
 <div fxLayout="column" fxLayoutGap="1rem">
   <mat-card>
     <div class="heading">
-      <h2 class="badge badge-secondary">_.chunk(array, [size=n])</h2>
-      <p>Creates an array of elements split into groups the length of size. If array can't be split evenly, the final
-        chunk will be the remaining elements.</p>
+      <h2 class="badge badge-secondary">_.compact(array)</h2>
+      <p>Creates an array with all falsey values removed. The values false, null, 0, "", undefined, and NaN are falsey.
+      </p>
       <h2>Since</h2>
-      <p>3.0.0</p>
+      <p>0.1.0</p>
       <h2>Arguments</h2>
-      <p>array (Array): The array to process.</p>
-      <p>[size=1] (number): The length of each chunk</p>
+      <p>array (Array): The array to compact.</p>
       <h2>Returns</h2>
-      <p>(Array): Returns the new array of chunks.</p>
+      <p>(Array): Returns the new array of filtered values.</p>
       <h2>Example</h2>
       <div class="codeEdit">
         <div class="p-3">
-          <p>_.chunk(['a', 'b', 'c', 'd'], 2);</p>
-          <p>Result => [['a', 'b'], ['c', 'd']]</p>
-          <p>_.chunk(['a', 'b', 'c', 'd'], 3);</p>
-          <p>Result => [['a', 'b', 'c'], ['d']]</p>
+          <p>_.compact([0, 1, false, 2, 3]);</p>
+          <p>Result => [1, 2, 3]</p>
         </div>
       </div>
     </div>
@@ -26,26 +23,22 @@
     <div class="body mt-3">
       <h2 class="badge badge-success"> Live Example : </h2>
       <div fxLayout="column" fxLayoutGap="1rem">
-        <div class="text-muted">
-          <span>Example input Array value : 1,2,3,4,5,6,7,8,9</span>
-        </div>
 
+        <div class="text-muted">
+          <span>Example input Array value : 0,1,2,3,false,10</span>
+        </div>
         <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="1rem">
           <mat-form-field fxFlex>
             <mat-label>Enter Array value</mat-label>
             <input matInput placeholder="Enter Array value" [(ngModel)]="arrayElement" required="true">
             <mat-hint>separate values by comma to convert value into an array</mat-hint>
           </mat-form-field>
-          <mat-form-field fxFlex>
-            <mat-label>Enter chunk size</mat-label>
-            <input matInput placeholder="Enter Chunk Size" [(ngModel)]="chunkSize" required="true">
-          </mat-form-field>
         </div>
         <div>
           <span>Origional Array : {{ getOrigionalArray() | json}}</span>
         </div>
         <div>
-          <span>Chunk Array : {{ getChunkArray() | json}}</span>
+          <span>Compact Array : {{ getCompactArray() | json}}</span>
         </div>
       </div>
     </div>

@@ -9,6 +9,7 @@ import { NgxEchartsModule } from 'ngx-echarts';
 import { SharedModule } from './common/module/shared.module';
 import { ArrayComponent } from './lodash/array/array.component';
 import { ChunkComponent } from './lodash/array/chunk/chunk.component';
+import { CompactComponent } from './lodash/array/compact/compact.component';
 import { MatSelectSearchComponent } from './common/component/mat-select-search/mat-select-search.component';
 
 @NgModule({
@@ -16,7 +17,8 @@ import { MatSelectSearchComponent } from './common/component/mat-select-search/m
     AppComponent,
     MatSelectSearchComponent,
     ArrayComponent,
-    ChunkComponent
+    ChunkComponent,
+    CompactComponent
   ],
   imports: [
     FormsModule,

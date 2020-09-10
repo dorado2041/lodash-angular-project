@@ -3,8 +3,7 @@ import * as _ from 'lodash';
 
 @Component({
   selector: 'chunk-component',
-  templateUrl: './chunk.component.html',
-  styleUrls: ['chunk.component.scss']
+  templateUrl: './chunk.component.html'
 })
 export class ChunkComponent {
   arrayElement: any;
